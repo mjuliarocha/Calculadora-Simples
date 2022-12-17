@@ -1,0 +1,49 @@
+package JuliaGit;
+
+import java.util.Scanner;
+
+public class TesteCalculadora {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Digite o primeiro valor: ");
+		double valor1 = entrada.nextDouble();
+		
+		System.out.println("Digite o segundo valor: ");
+		double valor2 = entrada.nextDouble();
+		
+		double soma = valor1 + valor2;
+		double subtracao = valor1 - valor2;
+		double multiplicacao = valor1 * valor2;
+		double divisao = valor1 / valor2;
+		
+		System.out.println(" (1)Soma \n (2)Subtração \n (3)Multiplicação \n (4)Divisão");
+		System.out.println("Digite o número correspondente a operação que você deseja: ");
+		int operacao = entrada.nextInt();
+		
+		switch(operacao) {
+		case 1:
+			System.out.println("O resultado da soma é " + soma);
+			break;
+		
+		case 2:
+			System.out.println("O resultado da subtração é " + subtracao);
+			break;
+			
+		case 3:
+			System.out.println("O resultado da multiplicação é " + multiplicacao);
+			break;
+			
+		case 4:
+			if (valor1 < valor2) {
+				System.out.println("Não foi possível realizar a operação.");
+			}
+			else if (valor2 == 0) {
+				System.out.println("Não foi possível realizar a operação.");
+			}
+			else {
+				System.out.println("O valor da divisão é " + divisao);
+				break;
+			}
+		}
+	}
+}
